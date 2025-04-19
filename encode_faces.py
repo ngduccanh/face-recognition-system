@@ -43,7 +43,7 @@ for person_name in os.listdir(image_folder):
                     cursor.execute("INSERT INTO users (id, username, face_encoding) VALUES (?, ?, ?)",
                                    (user_id, person_name, face_encoding.tobytes()))
                     print(f"[INFO] Đã thêm {person_name} với user_id {user_id} vào database.")
-                    break  # ✅ Thêm 1 ảnh là đủ, không cần thêm nhiều
+                    break
 
 # Lưu thay đổi vào database và đóng kết nối
 conn.commit()

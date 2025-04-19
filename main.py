@@ -43,7 +43,7 @@ def get_attendance():
 async def get_users():
     try:
         conn = sqlite3.connect("attendance_system.db")
-        conn.row_factory = sqlite3.Row  # ✅ Quan trọng!
+        conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
 
         # Truy vấn DISTINCT để loại bỏ trùng
